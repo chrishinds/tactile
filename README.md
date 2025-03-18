@@ -1,21 +1,21 @@
-# Simulation of a hypothetical tile permutation game in golang
+# Tactile - a Tile Permutation Game
 
-This is a problem I set myself for fun, and to learn golang, for a week or so around Xmas 2023. 
+TL;DR: [https://chrishinds.github.io/tactile/](https://chrishinds.github.io/tactile/)
 
 A red green and blue tiles of equal numbers are placed on a 3x5 grid. Tiles' positions can be permuted by 8 operations: a shift up or down on any of three of the columns (with the top/bottom tile wrapping within that column), or the rotation of the grid's central square of 3x3 tiles either clockwise or counter-clockwise (referred to here as left and right, respectively). The "solution" is defined as the board state where the tiles form 3 neat columns of red, green, and blue, from left to right. The "game" is to take the board from a starting state, permute with a sequence of operations, and reach the solution state. Here's an example of a game with an initial state which can reach the solution using only a single operation:
 
-``` 
-   left ->
-RGB       RGB
-BBB       RGB
-GGG       RGB
-RRR       RGB
-RGB       RGB
-```
+<img src="img/example.png" width="300"/>
 
-There's nothing particularly special about 3x5, 3 colours of tile, or the above operations, but since this is a brute force simulation it seems reasonable to keep things small. The game is defined in [simple3x5.go](simple3x5.go). The simulation is in [data.go](data.go). I had initially intended for there to be other modules which would make the game playable. 🤷 
+A quick playable demonstrator for Tactile is provided in the `/play` folder. It's implemented in React and Typescript. You can play it on the github pages link above.
 
-The simulation can be run with `go run data.go simple3x5.go`. But here's a walk through of `main()`:
+# Simulation of Tactile Permutations in Golang
+
+It's fairly easy to think up permutation puzzle variants, but usually a bit harder to work out how difficult they are. 
+Brute force simulations aren't necessarily clever, but as a way of learning golang for a week or so around Xmas 2023, it was fun.
+There was nothing particularly special about 3x5, 3 colours of tile, or the above operations, but since this is a brute force simulation it seemed reasonable to keep things small. 
+The game is defined in [simulate/simple3x5.go](simulate/simple3x5.go). The simulation is in [simulate/data.go](simulate/data.go). 
+
+It can be run with `go run data.go simple3x5.go`. But here's a walk through of `main()`:
 
 ## Board state reachability 
 ```go
