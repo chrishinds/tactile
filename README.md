@@ -2,11 +2,11 @@
 
 TL;DR: [https://chrishinds.github.io/tactile/](https://chrishinds.github.io/tactile/)
 
-A red green and blue tiles of equal numbers are placed on a 3x5 grid. Tiles' positions can be permuted by 8 operations: a shift up or down on any of three of the columns (with the top/bottom tile wrapping within that column), or the rotation of the grid's central square of 3x3 tiles either clockwise or counter-clockwise (referred to here as left and right, respectively). The "solution" is defined as the board state where the tiles form 3 neat columns of red, green, and blue, from left to right. The "game" is to take the board from a starting state, permute with a sequence of operations, and reach the solution state. Here's an example of a game with an initial state which can reach the solution using only a single operation:
+Red green and blue tiles of equal numbers are placed on a 3x5 grid. Tiles' positions can be permuted by 8 operations: a shift up or down on any of three of the columns (with the top/bottom tile wrapping within that column), or the rotation of the grid's central square of 3x3 tiles either clockwise or counter-clockwise (referred to here as left and right, respectively). The "solution" is defined as the board state where the tiles form 3 neat columns of red, green, and blue, from left to right. The "game" is to take the board from a starting state, permute with a sequence of operations, and reach the solution state. Here's an example of a game with an initial state which can reach the solution using only a single operation:
 
 <img src="img/example.png" width="300"/>
 
-A quick playable demonstrator for Tactile is provided in the `/play` folder. It's implemented in React and Typescript. You can play it on the github pages link above.
+A quick playable demonstrator for Tactile is provided in the `/play` folder. It's implemented in React and Typescript. You can play it on the github-pages link above.
 
 # Simulation of Tactile Permutations in Golang
 
